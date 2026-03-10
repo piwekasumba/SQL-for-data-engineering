@@ -1,0 +1,21 @@
+# SQL Introduction for Data Engineering
+
+This repository contains foundational SQL concepts and PostgreSQL setup 
+examples based on the LinkedIn Learning course:  
+*Complete Guide to SQL for Data Engineering: Beginner to Advanced*.
+
+It demonstrates:
+✔ What SQL is and why it’s used  
+✔ How SQL fits into Data Engineering  
+✔ Environment setup with PostgreSQL  
+✔ Example SQL queries
+
+## Skills Covered
+- SQL basics
+- PostgreSQL installation and usage
+- SELECT queries
+- Understanding the role of SQL in data workflows
+
+## How to Use
+1. Read the documentation in the `docs/` folder  
+2. Run SQL scripts in the `sql/` folder using PostgreSQL  
