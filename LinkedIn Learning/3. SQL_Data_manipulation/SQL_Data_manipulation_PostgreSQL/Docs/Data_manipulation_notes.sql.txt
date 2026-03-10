@@ -1,0 +1,28 @@
+# SQL Data Manipulation with PostgreSQL
+
+This project demonstrates SQL data manipulation operations.
+
+Topics covered:
+- Inserting data into tables
+- Updating existing records
+- Deleting records from tables
+
+These SQL commands are part of Data Manipulation Language (DML), 
+which allows users to modify data stored in database tables.
+
+## Files
+
+01_create_tables.sql  
+Creates example tables.
+
+02_insert_data.sql  
+Adds sample data into tables.
+
+03_update_records.sql  
+Updates existing data.
+
+04_delete_records.sql  
+Deletes records from tables.
+
+05_challenge_delete.sql  
+Example challenge demonstrating delete queries.
