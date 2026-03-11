@@ -1,0 +1,111 @@
+Files and Descriptions
+
+
+1. 01_built_in_functions.sql
+
+Purpose:
+
+Demonstrates the use of PostgreSQL built-in functions for basic operations on data.
+
+Key features:
+
+Text functions: UPPER(), LOWER(), CONCAT()
+
+Numeric functions: ROUND(), CEIL(), FLOOR()
+
+Date functions: NOW(), CURRENT_DATE, AGE()
+
+Helps transform and clean data for queries and reports
+
+Example:
+
+SELECT UPPER(user_name) AS user_upper,
+       ROUND(total_amount, 2) AS rounded_amount,
+       NOW() AS current_time
+FROM users;
+2. 02_mathematical_functions.sql
+
+Purpose:
+
+Illustrates PostgreSQL numeric and mathematical functions for calculations.
+
+Key features:
+
+Addition, subtraction, multiplication, division within queries
+
+Functions: ABS(), CEIL(), FLOOR(), POWER(), MOD()
+
+Useful for analytics, metric calculations, and derived columns
+
+Example:
+
+SELECT amount,
+       ABS(amount) AS absolute_value,
+       POWER(amount, 2) AS squared
+FROM transactions;
+3. 03_string_functions.sql
+
+Purpose:
+
+Shows how to manipulate and format string data using PostgreSQL functions.
+
+Key features:
+
+Functions: CONCAT(), SUBSTRING(), TRIM(), LENGTH()
+
+Helps clean, parse, and transform text data for reporting and analysis
+
+Example:
+
+SELECT CONCAT(first_name, ' ', last_name) AS full_name,
+       LENGTH(email) AS email_length
+FROM users;
+4. 04_date_time_functions.sql
+
+Purpose:
+
+Demonstrates working with dates and timestamps for analysis and reporting.
+
+Key features:
+
+Functions: NOW(), CURRENT_DATE, AGE(), DATE_PART()
+
+Useful for calculating durations, filtering by dates, and generating time-based metrics
+
+Example:
+
+SELECT user_name,
+       AGE(NOW(), registration_date) AS account_age
+FROM users;
+5. 05_user_defined_functions.sql
+
+Purpose:
+
+Introduces custom PostgreSQL functions to encapsulate reusable logic.
+
+Key features:
+
+Define functions with CREATE FUNCTION
+
+Accept parameters and return values or tables
+
+Can be used in SELECT, WHERE, or aggregation clauses
+
+Promotes modular and maintainable SQL code
+
+Example:
+
+CREATE FUNCTION calculate_discount(amount NUMERIC)
+RETURNS NUMERIC AS $$
+BEGIN
+    IF amount > 1000 THEN
+        RETURN amount * 0.10;
+    ELSE
+        RETURN 0;
+    END IF;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Usage
+SELECT user_name, calculate_discount(total_amount) AS discount
+FROM users;
