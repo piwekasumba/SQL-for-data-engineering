@@ -1,0 +1,20 @@
+
+Overview
+
+This folder contains PostgreSQL SQL scripts demonstrating advanced SQL querying techniques used in data engineering and analytics workflows.
+
+The scripts build on basic SQL knowledge and introduce operations such as:
+
+Multi-table joins (INNER, LEFT, RIGHT)
+
+Subqueries for dynamic filtering
+
+Aggregations using GROUP BY and HAVING
+
+Conditional logic with CASE statements
+
+Window functions for analytical calculations
+
+Sorting, limiting, and formatting results
+
+These techniques are widely used in ETL pipelines, analytics, and reporting to extract, transform, and summarize data efficiently.

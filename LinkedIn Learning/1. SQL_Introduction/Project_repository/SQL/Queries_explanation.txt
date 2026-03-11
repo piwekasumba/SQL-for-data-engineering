@@ -1,0 +1,73 @@
+Files and Descriptions
+1. 01_intro_queries.sql
+
+Purpose:
+
+Demonstrates basic SQL query execution using simple SELECT statements.
+
+These queries do not require existing database tables and can be executed immediately after connecting to a PostgreSQL database.
+
+Key concepts introduced:
+
+Basic SELECT statement syntax
+
+Returning static text values
+
+Performing arithmetic operations in SQL
+
+Retrieving PostgreSQL system information
+
+Example Queries
+Basic SELECT Statement
+SELECT 'Hello, World!' AS greeting;
+
+Description:
+
+This query returns a simple text value labeled as greeting.
+It demonstrates the basic syntax of a SQL query and introduces the concept of column aliases using AS.
+
+Expected result:
+
+greeting
+Hello, World!
+Arithmetic Expression in SQL
+SELECT 2 + 2 AS addition_result;
+
+Description:
+
+This query demonstrates that SQL can perform mathematical calculations directly within a SELECT statement.
+
+Expected result:
+
+addition_result
+4
+PostgreSQL Version Check
+SELECT version();
+
+Description:
+
+This query retrieves the current PostgreSQL server version and system information.
+
+This is commonly used to:
+
+Confirm that a connection to the database server is active
+
+Verify the installed PostgreSQL version
+
+Check database environment configuration
+
+Example output:
+
+PostgreSQL 18.x on x86_64-pc-linux-gnu, compiled by GCC, 64-bit
+
+Relevance to Data Engineering
+
+Introductory queries like these are often used when:
+
+Setting up a new SQL development environment
+
+Testing database connections
+
+Verifying that SQL tools and database servers are functioning correctly
+
+While simple, these queries demonstrate the foundational structure of SQL statements that will be used in more advanced operations such as table creation, data manipulation, and analytical querying.

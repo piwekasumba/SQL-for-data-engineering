@@ -1,0 +1,7 @@
+Overview
+
+This folder contains PostgreSQL SQL scripts demonstrating fundamental SQL concepts used in data engineering. These scripts focus on the basic operations required to create database tables, insert data, retrieve records, and filter results.
+
+Understanding these core SQL operations is essential before moving on to more advanced topics such as joins, aggregations, and analytical queries.
+
+The examples in this folder simulate a simple relational dataset to practice working with structured data.

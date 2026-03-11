@@ -1,21 +1,182 @@
-# SQL Introduction for Data Engineering
+SQL Functions Notes:
 
-This repository contains foundational SQL concepts and PostgreSQL setup 
-examples based on the LinkedIn Learning course:  
-*Complete Guide to SQL for Data Engineering: Beginner to Advanced*.
+1. Overview
 
-It demonstrates:
-✔ What SQL is and why it’s used  
-✔ How SQL fits into Data Engineering  
-✔ Environment setup with PostgreSQL  
-✔ Example SQL queries
+Structured Query Language (SQL) is the standard language used to interact with relational database management systems (RDBMS). It allows engineers to create database structures, store data, retrieve information, and manage access to data. SQL has been widely used since the 1970s and remains the primary language for managing structured data in relational databases.
 
-## Skills Covered
-- SQL basics
-- PostgreSQL installation and usage
-- SELECT queries
-- Understanding the role of SQL in data workflows
+For data engineers, SQL is a fundamental skill because most organizations store critical business data in relational databases such as PostgreSQL, MySQL, SQL Server, and Oracle.
 
-## How to Use
-1. Read the documentation in the `docs/` folder  
-2. Run SQL scripts in the `sql/` folder using PostgreSQL  
+This project repository demonstrates foundational SQL knowledge through practical examples including table creation, data insertion, and querying operations.
+
+2. What is a Database?
+
+A database is an organized collection of structured data designed for efficient storage, retrieval, and manipulation. Databases allow applications and organizations to manage large amounts of information reliably and consistently.
+
+Databases are used across industries including:
+
+Finance and banking systems
+
+E-commerce platforms
+
+Healthcare records
+
+Customer relationship management (CRM)
+
+Logistics and supply chain systems
+
+3. Relational Databases
+
+Relational databases organize data into tables consisting of rows and columns.
+
+Each table represents an entity such as customers, orders, or products.
+
+Example structure:
+
+customer_id	name	country
+1	Alice	South Africa
+2	John	USA
+
+Key characteristics of relational databases:
+
+Data is stored in tables
+
+Tables can be linked using relationships
+
+Each row represents a record
+
+Each column represents a data attribute
+
+Common relational database systems include:
+
+PostgreSQL
+
+MySQL
+
+Microsoft SQL Server
+
+Oracle Database
+
+4. SQL Command Categories
+
+SQL statements are commonly grouped into several functional categories depending on the operation performed.
+
+4.1 Data Definition Language (DDL)
+
+DDL commands define and modify the structure of database objects.
+
+Common commands:
+
+CREATE
+ALTER
+DROP
+TRUNCATE
+
+Example:
+
+CREATE TABLE customers (
+customer_id INTEGER PRIMARY KEY,
+name VARCHAR(100),
+country VARCHAR(50)
+);
+4.2 Data Manipulation Language (DML)
+
+DML commands manipulate the data stored inside database tables.
+
+Common commands:
+
+SELECT
+INSERT
+UPDATE
+DELETE
+
+Example:
+
+INSERT INTO customers (customer_id, name, country)
+VALUES (1, 'Alice', 'South Africa');
+4.3 Data Control Language (DCL)
+
+DCL commands manage database permissions and access control.
+
+Common commands:
+
+GRANT
+REVOKE
+
+These commands are typically used by database administrators to control who can access or modify database objects.
+
+4.4 Transaction Control Language (TCL)
+
+TCL commands manage transactions to ensure data consistency.
+
+Common commands:
+
+COMMIT
+ROLLBACK
+SAVEPOINT
+
+Transactions ensure that multiple operations are executed safely and maintain database integrity.
+
+5. Basic SQL Query Structure
+
+The most common SQL operation is retrieving data using the SELECT statement.
+
+Basic syntax:
+
+SELECT column_name
+FROM table_name
+WHERE condition
+ORDER BY column_name;
+
+Example query:
+
+SELECT name, country
+FROM customers
+WHERE country = 'South Africa';
+
+The SELECT statement returns rows from one or more database tables and is the most frequently used SQL operation for data retrieval and analysis.
+
+6. Importance of SQL for Data Engineering
+
+SQL is essential for data engineers because it is used throughout the data lifecycle.
+
+Typical responsibilities include:
+
+Extracting data from operational databases
+
+Transforming raw data for analytics
+
+Building data pipelines
+
+Managing data warehouse tables
+
+Optimizing database queries
+
+Ensuring data integrity and consistency
+
+SQL enables engineers to efficiently handle structured data and build scalable data infrastructure.
+
+7. Practical Learning Objectives of This Repository
+
+This repository demonstrates foundational SQL concepts including:
+
+Creating relational tables
+
+Defining primary keys
+
+Inserting sample data
+
+Querying datasets
+
+Understanding relational structures
+
+Practicing SQL syntax and query logic
+
+The goal of this project is to build practical SQL skills applicable to real-world data engineering workflows.
+
+8. Conclusion
+
+SQL remains one of the most important technologies in the modern data ecosystem. Mastering SQL provides the foundation for careers in data engineering, analytics, and database administration.
+
+Through hands-on projects and structured learning, this repository documents the development of core SQL skills necessary for building and managing data systems.
+
+
