@@ -1,0 +1,129 @@
+Files and Descriptions
+
+
+1. 01_create_index.sql
+
+Purpose:
+
+Demonstrates how to create indexes on database tables using the CREATE INDEX statement.
+
+Indexes improve query performance when searching, filtering, or joining large datasets.
+
+Key features:
+
+Creates indexes on frequently queried columns
+
+Demonstrates basic index syntax
+
+Improves lookup performance for large tables
+
+Example:
+
+CREATE INDEX idx_users_country
+ON users(country);
+
+This index allows queries filtering by country to execute faster.
+
+Example usage:
+
+SELECT *
+FROM users
+WHERE country = 'South Africa';
+
+With the index in place, PostgreSQL can locate matching rows much more efficiently.
+
+2. 02_composite_index.sql
+
+Purpose:
+
+Demonstrates creating multi-column indexes to optimize queries that filter on multiple columns.
+
+Composite indexes are useful when queries commonly include conditions on more than one column.
+
+Key features:
+
+Indexes multiple columns in a single structure
+
+Improves performance for multi-condition queries
+
+Demonstrates ordering of indexed columns
+
+Example:
+
+CREATE INDEX idx_users_country_date
+ON users(country, registration_date);
+
+Example usage:
+
+SELECT *
+FROM users
+WHERE country = 'South Africa'
+AND registration_date > '2024-01-01';
+
+The composite index helps PostgreSQL efficiently process both conditions.
+
+3. 03_query_performance_analysis.sql
+
+Purpose:
+
+Demonstrates analyzing SQL query performance using PostgreSQL’s EXPLAIN command.
+
+EXPLAIN shows how the database engine executes a query and whether indexes are being used.
+
+Key features:
+
+Displays query execution plans
+
+Helps identify slow queries
+
+Shows whether the database performs an index scan or sequential scan
+
+Example:
+
+EXPLAIN
+SELECT *
+FROM users
+WHERE country = 'South Africa';
+
+This command helps developers understand how the database processes queries.
+
+4. 04_explain_analyze.sql
+
+Purpose:
+
+Demonstrates measuring actual query performance using EXPLAIN ANALYZE.
+
+Unlike EXPLAIN, this command executes the query and reports real execution time.
+
+Key features:
+
+Measures actual execution cost
+
+Shows timing and performance statistics
+
+Helps identify performance bottlenecks
+
+Example:
+
+EXPLAIN ANALYZE
+SELECT *
+FROM users
+WHERE country = 'South Africa';
+
+This helps developers determine whether indexing improves performance.
+
+Relevance to Data Engineering
+
+Indexes and query optimization are critical for working with large datasets and high-performance systems.
+
+Data engineers use indexing and performance analysis to:
+
+Improve database query speed
+
+Optimize analytics and reporting queries
+
+Reduce load on production databases
+
+Support scalable data pipelines
+
+Efficient database performance becomes increasingly important as data volume grows.
