@@ -1,0 +1,7 @@
+Overview
+
+This folder contains PostgreSQL SQL scripts that demonstrate the basic concepts of ETL (Extract, Transform, Load) using SQL.
+
+ETL is a core process used in data engineering to move and prepare data for analytics systems, data warehouses, and reporting tools. The process involves extracting data from source systems, transforming it into a usable format, and loading it into a target database or data warehouse.
+
+The examples in this folder illustrate how SQL can be used to perform these operations within a PostgreSQL database environment.
