@@ -3,58 +3,43 @@ Complete SQL practice and projects from beginner to advanced, designed for aspir
 
 
 
-SQL-For-Data-Engineering-South-Africa
+# SQL Data Engineering Project (PostgreSQL)
 
-A comprehensive SQL learning and practice repository focused on building the foundational database and querying skills required for entry-level Data Engineering roles in South Africa.
+##  Overview
 
-This project documents my journey of learning SQL through structured exercises, real-world inspired datasets, and progressively more advanced queries. The goal is to demonstrate practical database skills that are essential for building and maintaining data pipelines, transforming datasets, and supporting analytics workflows.
+This project demonstrates core data engineering skills using SQL and PostgreSQL.
 
-Project Overview
+The focus is on working with structured data through real-world processes such as data cleaning, transformation, and analysis. The project simulates how raw data is prepared and structured for downstream analytics and business decision-making.
 
-SQL is one of the most important technologies used by data engineers to interact with databases, retrieve information, and transform data for analytics and reporting.
+As an aspiring data professional, this project represents my ability to apply SQL beyond basic queries and approach data with a practical, workflow-driven mindset.
 
-This repository demonstrates the core SQL skills expected from junior data professionals, including:
+---
 
-Database table creation and schema design
+##  Skills Demonstrated
 
-Data insertion and manipulation
+- SQL (PostgreSQL)
+- Data Cleaning & Transformation
+- Joins & Aggregations
+- Data Analysis
+- Relational Data Modeling
+- Query Optimization
 
-Data filtering and sorting
+---
 
-Query optimization and logical conditions
+##  Project Structure
 
-Analytical querying and aggregation
+- **data/** – Sample datasets used for practice and analysis  
+- **sql/** – SQL scripts for data cleaning, transformation, and querying  
+- **docs/** – Project documentation and notes  
 
-Each section of this project builds upon the previous one, progressing from beginner SQL syntax to more advanced querying techniques used in real data environments.
+---
 
-Technologies Used
+##  Example Query
 
-PostgreSQL
+```sql
+SELECT customer_id, SUM(claim_amount) AS total_claims
+FROM claims
+GROUP BY customer_id
+ORDER BY total_claims DESC;
 
-SQL
 
-pgAdmin Query Tool
-
-Git & GitHub
-
-Skills Demonstrated
-
-This repository demonstrates the following technical skills:
-
-Writing SQL queries to retrieve data
-
-Filtering data using WHERE conditions
-
-Sorting results using ORDER BY
-
-Applying logical operators such as AND and OR
-
-Creating relational database tables
-
-Inserting structured data into tables
-
-Designing simple relational schemas
-
-Performing basic analytical queries
-
-These are core skills expected from entry-level data professionals working with relational databases.
