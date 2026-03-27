@@ -1,7 +1,0 @@
-Overview
-
-This folder contains introductory PostgreSQL SQL scripts designed to demonstrate the basic structure and execution of SQL queries.
-
-These examples introduce the fundamental SELECT statement and show how SQL can return values, perform calculations, and retrieve system information from a PostgreSQL database.
-
-The purpose of these queries is to verify that the SQL environment is working correctly and to provide a simple starting point before moving on to more complex database operations.

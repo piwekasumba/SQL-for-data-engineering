@@ -1,7 +1,0 @@
-Overview
-
-This folder contains PostgreSQL SQL scripts demonstrating the use of views and stored procedures to organize, simplify, and automate database operations.
-
-Views and stored procedures are important database features that allow developers and data engineers to create reusable logic, simplify complex queries, and maintain cleaner database structures.
-
-These scripts demonstrate how SQL can be used not only to query data but also to build reusable database components that improve efficiency and maintainability.
