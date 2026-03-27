@@ -1,45 +1,38 @@
-# SQL-for-data-engenering-South Africa
-Complete SQL practice and projects from beginner to advanced, designed for aspiring data engineers. Includes real-world scenarios, queries, and sample datasets to showcase skills for South African entry-level Data Engineering roles.
+# SQL Data Transformation & Query Optimization (PostgreSQL)
 
+## Project Overview
+This project is a structured, hands-on exploration of SQL for data engineering. It covers exercises from beginner to advanced levels, focusing on:
 
+- Writing optimized SQL queries
+- Performing joins, aggregations, and transformations
+- Strengthening ETL and data analysis skills
 
-# SQL Data Engineering Project (PostgreSQL)
+The goal is to transform raw datasets into clean, analysis-ready tables and understand best practices for query optimization.
 
-##  Overview
+## Why It Matters
+Strong SQL and query optimization skills are essential for data engineers. Efficient queries and transformations enable:
 
-This project demonstrates core data engineering skills using SQL and PostgreSQL.
+- Faster and more accurate data analysis
+- Reliable data pipelines for decision-making
+- Scalable ETL workflows in real-world business environments
 
-The focus is on working with structured data through real-world processes such as data cleaning, transformation, and analysis. The project simulates how raw data is prepared and structured for downstream analytics and business decision-making.
+## Key Features
+- Step-by-step exercises from beginner to advanced SQL
+- Query optimization for improved performance
+- Data cleaning and transformation using PostgreSQL
+- Documentation of workflows for reproducibility
 
-As an aspiring data professional, this project represents my ability to apply SQL beyond basic queries and approach data with a practical, workflow-driven mindset.
+## Tech & Tools
+- PostgreSQL
+- SQL
+- Git & GitHub
 
----
+## Example Output
+- Cleaned and transformed datasets ready for analysis
+- Optimized SQL queries for faster execution
+- Stepwise solutions with explanations
 
-##  Skills Demonstrated
-
-- SQL (PostgreSQL)
-- Data Cleaning & Transformation
-- Joins & Aggregations
-- Data Analysis
-- Relational Data Modeling
-- Query Optimization
-
----
-
-##  Project Structure
-
-- **data/** – Sample datasets used for practice and analysis  
-- **sql/** – SQL scripts for data cleaning, transformation, and querying  
-- **docs/** – Project documentation and notes  
-
----
-
-##  Example Query
-
-```sql
-SELECT customer_id, SUM(claim_amount) AS total_claims
-FROM claims
-GROUP BY customer_id
-ORDER BY total_claims DESC;
-
-
+## How to Use
+1. Clone this repository:
+```bash
+git clone https://github.com/piwekasumba/SQL-for-data-engineering.git
