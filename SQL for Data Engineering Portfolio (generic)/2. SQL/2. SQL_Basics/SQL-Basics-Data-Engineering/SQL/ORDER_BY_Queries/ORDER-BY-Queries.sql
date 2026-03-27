@@ -1,0 +1,5 @@
+SELECT * FROM Customers
+ORDER BY Age;
+
+SELECT * FROM Orders
+ORDER BY Amount DESC;

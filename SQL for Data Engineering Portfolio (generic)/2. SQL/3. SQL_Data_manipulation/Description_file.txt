@@ -1,0 +1,15 @@
+Overview
+
+This folder contains PostgreSQL SQL scripts demonstrating data manipulation operations. Data manipulation refers to modifying and managing data stored inside database tables.
+
+These scripts introduce essential SQL commands used to:
+
+Insert new records into tables
+
+Update existing data
+
+Delete records when necessary
+
+Retrieve filtered datasets for analysis
+
+These operations form a core part of data engineering workflows, particularly when building ETL pipelines that ingest, transform, and maintain datasets.

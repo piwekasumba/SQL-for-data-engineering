@@ -1,0 +1,83 @@
+Analytical Function Notes
+
+This document summarizes the key analytical SQL functions used in data engineering and analytics. These functions are critical for transforming, summarizing, and analyzing large datasets efficiently in relational databases like PostgreSQL.
+
+Mastering these functions demonstrates the ability to perform data aggregation, ranking, and advanced calculations, which are core skills expected from entry-level data engineers.
+
+1️⃣ Aggregate Functions
+
+Aggregate functions compute a single result from multiple rows of a table.
+
+Function	Description	Example
+SUM()	Returns the total sum of a numeric column	SELECT SUM(amount) AS total_revenue FROM orders;
+AVG()	Returns the average value of a numeric column	SELECT AVG(amount) AS average_order FROM orders;
+COUNT()	Returns the number of rows	SELECT COUNT(customer_id) AS total_customers FROM customers;
+MIN()	Returns the minimum value	SELECT MIN(amount) FROM orders;
+MAX()	Returns the maximum value	SELECT MAX(amount) FROM orders;
+
+Use case in data engineering: Summarize revenue, calculate metrics for dashboards, and generate reports.
+
+2️⃣ GROUP BY Clause
+
+The GROUP BY clause is used to group rows that share a property so that aggregate functions can be applied to each group.
+
+Example: Total revenue per customer
+
+SELECT customer_id, SUM(amount) AS total_spent
+FROM orders
+GROUP BY customer_id;
+
+Key points:
+
+Every column in the SELECT list that is not aggregated must appear in GROUP BY.
+
+Often combined with HAVING to filter grouped results.
+
+3️⃣ HAVING Clause
+
+HAVING filters results after aggregation (unlike WHERE, which filters rows before aggregation).
+
+Example: Customers with total spending over 500
+
+SELECT customer_id, SUM(amount) AS total_spent
+FROM orders
+GROUP BY customer_id
+HAVING SUM(amount) > 500;
+
+Use case: Identify top-performing customers or products for reporting and analytics.
+
+4️⃣ Window Functions (OVER clause)
+
+Window functions perform calculations across a set of rows related to the current row without collapsing the result into a single row.
+
+Common window functions:
+
+Function	Description	Example
+ROW_NUMBER()	Assigns a unique sequential number to rows	SELECT customer_id, ROW_NUMBER() OVER (ORDER BY amount DESC) AS rank FROM orders;
+RANK()	Assigns rank, skipping duplicates	SELECT customer_id, RANK() OVER (ORDER BY amount DESC) AS rank FROM orders;
+DENSE_RANK()	Like RANK(), but no gaps	SELECT customer_id, DENSE_RANK() OVER (ORDER BY amount DESC) AS rank FROM orders;
+SUM() OVER()	Calculates running totals	SELECT customer_id, SUM(amount) OVER (PARTITION BY customer_id ORDER BY order_date) AS running_total FROM orders;
+AVG() OVER()	Calculates moving average	SELECT customer_id, AVG(amount) OVER (PARTITION BY customer_id ORDER BY order_date ROWS BETWEEN 1 PRECEDING AND CURRENT ROW) AS moving_avg FROM orders;
+
+Key points:
+
+PARTITION BY groups rows for the window function.
+
+ORDER BY inside OVER() determines the order of calculations.
+
+Window functions do not reduce rows, unlike aggregate functions.
+
+Use case: Ranking customers, calculating running totals, identifying trends, or performing analytics in ETL pipelines.
+
+5️⃣ CASE Statement with Aggregates
+
+The CASE statement can be combined with aggregates to perform conditional calculations.
+
+Example: Count high-value orders (>500) per customer
+
+SELECT customer_id,
+       SUM(CASE WHEN amount > 500 THEN 1 ELSE 0 END) AS high_value_orders
+FROM orders
+GROUP BY customer_id;
+
+Use case: Categorize data for business insights or dashboards.

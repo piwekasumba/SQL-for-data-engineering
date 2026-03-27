@@ -1,0 +1,7 @@
+Overview
+
+This folder contains PostgreSQL SQL scripts demonstrating how indexes improve database performance and how query execution can be analyzed and optimized.
+
+Indexes are an essential database optimization technique. They allow the database engine to locate rows more efficiently instead of scanning entire tables.
+
+The examples in this folder show how indexes work, when they should be used, and how to analyze query performance using PostgreSQL tools.

@@ -1,0 +1,71 @@
+Files and Descriptions
+
+1. 01_create_views.sql
+
+Purpose:
+
+Demonstrates how to create SQL views using the CREATE VIEW statement.
+
+A view is a virtual table that is created from the result of a SQL query. Views allow complex queries to be stored and reused without rewriting the query each time.
+
+Key features:
+
+Creates reusable query results
+
+Simplifies complex SQL logic
+
+Improves readability and organization of queries
+
+Allows easier access to frequently used datasets
+
+Example:
+
+CREATE VIEW user_transactions AS
+SELECT u.user_name, t.transaction_id, t.amount
+FROM users u
+JOIN transactions t ON u.user_id = t.user_id;
+
+This view allows users to query transaction data without repeatedly writing the join logic.
+
+Example usage:
+
+SELECT *
+FROM user_transactions;
+2. 02_stored_procedures.sql
+
+Purpose:
+
+Demonstrates creating stored procedures using PostgreSQL procedural language (PL/pgSQL).
+
+Stored procedures allow SQL logic to be stored and executed as a reusable program inside the database.
+
+Key features:
+
+Encapsulates complex logic inside the database
+
+Accepts parameters as input
+
+Can perform multiple operations in a single execution
+
+Improves automation and consistency in database workflows
+
+Example:
+
+CREATE OR REPLACE PROCEDURE update_user_country(
+    user_id_param INT,
+    new_country VARCHAR
+)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    UPDATE users
+    SET country = new_country
+    WHERE user_id = user_id_param;
+END;
+$$;
+
+Example usage:
+
+CALL update_user_country(1, 'South Africa');
+
+This procedure updates a user's country using a reusable database command.

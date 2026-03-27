@@ -1,0 +1,97 @@
+Files and Descriptions
+
+
+1. 01_create_tables.sql
+
+Purpose:
+
+Defines database tables, their columns, and data types. This script establishes the relational structure for all subsequent queries.
+
+Key features:
+
+Creates multiple tables (e.g., users, products, categories, transactions)
+
+Defines primary keys for unique identification
+
+Includes data types such as INTEGER, VARCHAR, DECIMAL, and TIMESTAMP
+
+Prepares database for data insertion and querying
+
+2. 02_insert_into.sql
+
+Purpose:
+
+Populates tables with sample data to simulate real-world scenarios. This script enables testing of queries without relying on external datasets.
+
+Key features:
+
+Inserts multiple rows per table
+
+Uses consistent sample data across related tables
+
+Demonstrates basic INSERT INTO syntax
+
+Supports testing of SELECT, WHERE, AND/OR, ORDER BY, and joins
+
+3. 03_select_queries.sql
+
+Purpose:
+
+Demonstrates basic data retrieval from database tables using SELECT.
+
+Key features:
+
+Simple column selection (SELECT column_name FROM table)
+
+Retrieval of all columns (SELECT * FROM table)
+
+Column aliasing (AS)
+
+Filtering with WHERE clause
+
+Sorting results using ORDER BY
+
+Example:
+
+SELECT user_name, country 
+FROM users 
+WHERE country = 'South Africa'
+ORDER BY user_name ASC;
+4. 04_filter_conditions.sql
+
+Purpose:
+Introduces conditional logic with AND/OR operators for complex filters.
+
+Key features:
+
+Combines multiple conditions in a single query
+
+Demonstrates operator precedence and parentheses
+
+Shows practical examples like filtering transactions by user and amount
+
+Example:
+
+SELECT *
+FROM transactions
+WHERE amount > 500
+AND country = 'South Africa';
+5. 05_order_by_queries.sql
+
+Purpose:
+
+Teaches sorting results using ORDER BY clause.
+
+Key features:
+
+Orders data by one or more columns
+
+Supports ascending (ASC) and descending (DESC) order
+
+Shows combination with filtering and aggregation
+
+Example:
+
+SELECT user_name, total_amount
+FROM users
+ORDER BY total_amount DESC;

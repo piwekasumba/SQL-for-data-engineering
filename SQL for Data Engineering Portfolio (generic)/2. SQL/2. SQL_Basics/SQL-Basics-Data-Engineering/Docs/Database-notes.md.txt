@@ -1,0 +1,32 @@
+# SQL Basics for Data Engineering
+
+This project demonstrates fundamental SQL skills using PostgreSQL.
+
+It covers:
+- Creating database tables
+- Writing SELECT queries
+- Filtering data using WHERE
+- Sorting data using ORDER BY
+- Combining conditions using AND and OR
+
+These skills are essential for working with relational databases in data engineering.
+
+## Files
+
+sql/01_create_tables.sql  
+Creates example database tables.
+
+sql/02_insert_sample_data.sql  
+Inserts sample rows for testing.
+
+sql/03_select_queries.sql  
+Basic SELECT queries.
+
+sql/04_filter_queries.sql  
+Filtering data using WHERE conditions.
+
+sql/05_order_by_queries.sql  
+Sorting results using ORDER BY.
+
+sql/06_and_or_conditions.sql  
+Combining filters using AND and OR.

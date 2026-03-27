@@ -1,0 +1,173 @@
+Advanced SQL Query Techniques
+
+
+1. Overview
+
+Advanced SQL queries allow data engineers and analysts to perform more complex data retrieval, transformation, and analysis operations. These techniques extend beyond basic queries and enable the extraction of deeper insights from relational databases.
+
+Advanced querying is essential in modern data engineering workflows because it supports tasks such as:
+
+Joining multiple datasets
+
+Aggregating large volumes of data
+
+Performing conditional filtering
+
+Structuring complex analytical queries
+
+Developing strong skills in advanced SQL querying is important for building scalable data pipelines and analytics systems.
+
+2. JOIN Operations
+
+JOIN operations combine rows from two or more tables based on a related column between them. This allows engineers to retrieve connected data stored across multiple tables.
+
+INNER JOIN
+
+An INNER JOIN returns only the rows that have matching values in both tables.
+
+Example:
+
+SELECT customers.name, orders.amount
+FROM customers
+INNER JOIN orders
+ON customers.customer_id = orders.customer_id;
+
+This query retrieves customer names along with their corresponding order amounts.
+
+LEFT JOIN
+
+A LEFT JOIN returns all rows from the left table and the matching rows from the right table. If no match exists, the result will contain NULL values for the right table.
+
+Example:
+
+SELECT customers.name, orders.amount
+FROM customers
+LEFT JOIN orders
+ON customers.customer_id = orders.customer_id;
+
+This query shows all customers, including those who have not placed orders.
+
+RIGHT JOIN
+
+A RIGHT JOIN returns all rows from the right table and the matching rows from the left table.
+
+Example:
+
+SELECT customers.name, orders.amount
+FROM customers
+RIGHT JOIN orders
+ON customers.customer_id = orders.customer_id;
+
+This query ensures that all orders are returned, even if customer information is missing.
+
+3. GROUP BY Clause
+
+The GROUP BY clause groups rows that have the same values in specified columns. It is commonly used with aggregate functions such as SUM, COUNT, and AVG.
+
+Example:
+
+SELECT customer_id, SUM(amount) AS total_spent
+FROM orders
+GROUP BY customer_id;
+
+This query calculates the total amount spent by each customer.
+
+4. HAVING Clause
+
+The HAVING clause filters results after aggregation has been applied.
+
+Example:
+
+SELECT customer_id, SUM(amount) AS total_spent
+FROM orders
+GROUP BY customer_id
+HAVING SUM(amount) > 1000;
+
+This query returns only customers whose total spending exceeds 1000.
+
+Unlike the WHERE clause, which filters rows before grouping, HAVING filters aggregated results.
+
+5. Subqueries
+
+A subquery is a query nested inside another SQL query. Subqueries allow complex filtering and calculations based on intermediate results.
+
+Example:
+
+SELECT name
+FROM customers
+WHERE customer_id IN (
+SELECT customer_id
+FROM orders
+WHERE amount > 500
+);
+
+This query returns customers who have placed orders greater than 500.
+
+Subqueries are useful when filtering based on results from another query.
+
+6. ORDER BY Clause
+
+The ORDER BY clause sorts query results based on one or more columns.
+
+Example:
+
+SELECT customer_id, amount
+FROM orders
+ORDER BY amount DESC;
+
+This query returns orders sorted from highest to lowest value.
+
+Sorting data is commonly used in reporting and analytics.
+
+7. LIMIT Clause
+
+The LIMIT clause restricts the number of rows returned by a query.
+
+Example:
+
+SELECT *
+FROM orders
+ORDER BY amount DESC
+LIMIT 5;
+
+This query returns the top five highest-value orders.
+
+Limiting results is useful when working with large datasets or retrieving sample data.
+
+8. Practical Use in Data Engineering
+
+Advanced SQL querying techniques are commonly used by data engineers to:
+
+Join datasets from multiple systems
+
+Aggregate transactional data
+
+Filter large datasets efficiently
+
+Prepare datasets for analytics and reporting
+
+Build transformation logic in ETL pipelines
+
+Efficient query design improves data pipeline performance and ensures reliable analytics results.
+
+9. Practical Learning Objectives
+
+This section of the repository focuses on developing practical SQL querying skills including:
+
+Joining relational tables
+
+Aggregating and grouping datasets
+
+Filtering aggregated results
+
+Writing nested queries
+
+Sorting and limiting query outputs
+
+These techniques represent essential SQL capabilities used in real-world data engineering and analytics environments.
+
+10. Conclusion
+
+Advanced SQL queries allow engineers to extract meaningful insights from complex relational datasets. By combining joins, aggregations, subqueries, and filtering operations, engineers can transform raw data into structured information used by analytical systems.
+
+Mastering these techniques is an important step toward building scalable data pipelines and performing efficient data analysis.

@@ -1,0 +1,101 @@
+1️⃣ Users & Roles
+What are Users?
+
+A user is an account that can connect to the database.
+
+Users can be granted permissions to read, write, or manage data.
+
+What are Roles?
+
+A role is a set of privileges that can be assigned to users.
+
+Roles can simplify permission management by grouping privileges.
+
+PostgreSQL Syntax Examples:
+
+-- Create a new role with login privilege
+CREATE ROLE analyst LOGIN PASSWORD 'StrongPassword123';
+
+-- Create a role without login (group role)
+CREATE ROLE reporting;
+
+-- Grant role to user
+GRANT reporting TO analyst;
+
+Key Points:
+
+Roles allow centralized management of permissions.
+
+Users inherit permissions from the roles they belong to.
+
+2️⃣ Privileges & Permissions
+
+PostgreSQL allows granular control over what users can do.
+
+Common Privileges:
+
+SELECT — Read data
+
+INSERT — Add new data
+
+UPDATE — Modify data
+
+DELETE — Remove data
+
+CREATE — Create new tables or databases
+
+DROP — Delete tables or databases
+
+Granting Privileges Example:
+
+-- Allow SELECT and INSERT on the products table
+GRANT SELECT, INSERT ON products TO analyst;
+
+-- Revoke DELETE privilege
+REVOKE DELETE ON products FROM analyst;
+
+Best Practices:
+
+Always follow the principle of least privilege — users get only what they need.
+
+Avoid giving superuser privileges unless necessary.
+
+3️⃣ Database Security Best Practices
+
+Use strong passwords for all users.
+
+Limit superuser accounts — only admins should have them.
+
+Create separate roles for different types of access (e.g., analyst, developer, admin).
+
+Regularly review permissions to remove unnecessary access.
+
+Log all database activity for auditing purposes.
+
+Use SSL/TLS connections for remote database access to encrypt traffic.
+
+Encrypt sensitive data at rest (e.g., using PostgreSQL pgcrypto).
+
+4️⃣ User Management Workflow Example
+
+Create roles for departments:
+
+CREATE ROLE finance;
+CREATE ROLE marketing;
+
+Create users and assign roles:
+
+CREATE ROLE john LOGIN PASSWORD 'Finance123!';
+GRANT finance TO john;
+
+CREATE ROLE alice LOGIN PASSWORD 'Marketing123!';
+GRANT marketing TO alice;
+
+Assign table privileges based on role:
+
+GRANT SELECT, INSERT ON orders TO finance;
+GRANT SELECT ON marketing_campaigns TO marketing;
+
+Revoke privileges when no longer needed:
+
+REVOKE INSERT ON orders FROM finance;
