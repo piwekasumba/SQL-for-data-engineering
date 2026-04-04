@@ -1,45 +1,71 @@
-# SQL-for-data-engenering-South Africa
-Complete SQL practice and projects from beginner to advanced, designed for aspiring data engineers. Includes real-world scenarios, queries, and sample datasets to showcase skills for South African entry-level Data Engineering roles.
+SQL for Data Engineering Portfolio
 
+This repository documents my hands-on SQL training and practice using PostgreSQL, focused on building strong foundations for data engineering and data analysis workflows.
 
+The work in this repository was completed as part of structured training through LinkedIn Learning, where I applied SQL concepts to realistic datasets and practical exercises designed to reflect real-world data environments.
 
-# SQL Data Engineering Project (PostgreSQL)
+What This Repository Demonstrates
 
-##  Overview
+Through multiple commits and exercises, this repository showcases practical SQL skills including:
 
-This project demonstrates core data engineering skills using SQL and PostgreSQL.
+Creating and structuring relational database tables
 
-The focus is on working with structured data through real-world processes such as data cleaning, transformation, and analysis. The project simulates how raw data is prepared and structured for downstream analytics and business decision-making.
+Writing SQL queries for filtering and data exploration
 
-As an aspiring data professional, this project represents my ability to apply SQL beyond basic queries and approach data with a practical, workflow-driven mindset.
+Using joins, aggregations, and analytical queries
 
----
+Practicing data manipulation and query optimization
 
-##  Skills Demonstrated
+Debugging common SQL errors
 
-- SQL (PostgreSQL)
-- Data Cleaning & Transformation
-- Joins & Aggregations
-- Data Analysis
-- Relational Data Modeling
-- Query Optimization
+Organizing SQL scripts for structured workflows
 
----
+The final section of the repository includes a capstone-style insurance claims dataset analysis, demonstrating practical querying and data exploration techniques.
 
-##  Project Structure
+Technologies Used
 
-- **data/** – Sample datasets used for practice and analysis  
-- **sql/** – SQL scripts for data cleaning, transformation, and querying  
-- **docs/** – Project documentation and notes  
+SQL
 
----
+PostgreSQL
 
-##  Example Query
+Relational Database Concepts
 
-```sql
-SELECT customer_id, SUM(claim_amount) AS total_claims
-FROM claims
-GROUP BY customer_id
-ORDER BY total_claims DESC;
+Project Structure
 
+This repository is organized to reflect a progressive learning workflow:
 
+SQL basics and query fundamentals
+
+Data manipulation techniques
+
+Advanced querying and analytical functions
+
+Database structure and performance concepts
+
+Final project: insurance claims data analysis
+
+Each commit represents continued learning, experimentation, and improvement in SQL query design.
+
+Why This Project
+
+Data engineering begins with a strong understanding of how data is structured, queried, and transformed.
+
+This repository represents my effort to develop discipline, analytical thinking, and practical SQL skills while exploring how structured data can reveal patterns and insights.
+
+Continuous Learning
+
+I am continuing to expand my skills in:
+
+SQL and PostgreSQL
+
+Data pipelines
+
+Data engineering workflows
+
+Data platform concepts
+
+Connect With Me
+
+If you are interested in data, analytics, or SQL-based projects, feel free to connect with me on **LinkedIn.
+
+⭐ Thank you for taking the time to explore this repository.
