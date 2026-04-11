@@ -1,0 +1,17 @@
+- Build scalable relational database systems
+
+---
+
+-  Future Improvements
+
+- Add indexing for performance optimization
+- Introduce ETL pipeline simulation
+- Create views for reporting layer
+- Add stored procedures for automation
+- Build Power BI / Tableau dashboard integration
+
+---
+
+- Author
+
+This project was developed as part of a SQL and Data Engineering learning journey focused on building real-world, job-ready database skills.
