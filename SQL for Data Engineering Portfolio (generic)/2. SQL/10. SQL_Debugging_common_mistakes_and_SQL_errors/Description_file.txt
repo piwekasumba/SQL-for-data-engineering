@@ -1,7 +1,0 @@
-Overview
-
-This folder contains PostgreSQL SQL scripts designed to demonstrate common SQL mistakes, errors, and debugging techniques encountered when writing database queries.
-
-Debugging SQL queries is an essential skill for data engineers because errors frequently occur when working with complex datasets, database schemas, and large-scale data pipelines.
-
-The examples in this folder highlight typical issues such as syntax errors, missing conditions, incorrect joins, and data type mismatches. Each script illustrates how these issues occur and how they can be corrected.
